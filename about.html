@@ -13,23 +13,32 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-            .navbar {
-                background-color: #007bff; /* Alterar a cor de fundo para azul */
-            }
-
-            /* Alterar a cor dos links da navbar */
-            .navbar-nav .nav-link {
-                color: #ffffff; /* Cor dos links para branco */
-            }
+            /* Estilos da Navbar (mantendo as cores originais) */
             .navbar {
                 position: fixed;
                 top: 0;
                 left: 0;
                 right: 0;
                 box-shadow: none;
-                z-index: 10; /* Garante que a navbar fique acima de outros elementos */
-                width: 100%; 
+                z-index: 10;
+                width: 100%;
             }
+
+            /* Estilo dos links com efeito de barra */
+            .navbar-nav .nav-item {
+                position: relative;
+            }
+
+            .navbar-nav .nav-link {
+                color: #ffffff;
+                font-weight: 630;
+                font-size: 20px;
+                margin-left: 35px;
+                padding-bottom: 5px;
+                position: relative;
+                display: inline-block;
+            }
+
             .navbar-nav .nav-link::after {
                 content: '';
                 position: absolute;
@@ -40,28 +49,28 @@
                 background-color: white;
                 transition: width 0.3s ease;
             }
-            .navbar-nav .nav-link {
-                color: #ffffff; /* Cor do texto (branco) */
-                font-weight: 630; /* Deixar o texto em negrito (opcional) */
-                font-size: 20px;
-                margin-left: 35px;
-            }
+
             .navbar-nav .nav-link:hover::after,
             .navbar-nav .nav-link:focus::after {
                 width: 100%;
             }
+
             .navbar-nav .nav-item:focus-within .nav-link {
                 outline: none;
-                border-bottom: 2px solid white;
-                padding-bottom: 4px;
             }
+
             .navbar-nav .nav-link:hover, 
             .navbar-nav .nav-link:focus {
                 color: white;
                 text-decoration: none;
             }
 
-            /* JUSTIFICAR OS TEXTOS */
+            /* Espaço para a navbar fixa */
+            main {
+                padding-top: 70px;
+            }
+
+            /* Justificar textos */
             p {
                 text-align: justify;
             }
@@ -72,7 +81,7 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container px-5">
-                    <img src="./img/cabeca.png" class="navbar-brand" href="index.html" width="48px" />
+                    <a class="navbar-brand" href="index.html"><img src="./img/cabeca.png" width="48px" alt="Logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -131,13 +140,13 @@
                     <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
                         <div class="col mb-5 mb-xl-0">
                             <div class="text-center">
-                                <img class="img-fluid rounded-circle mb-4 px-4" src="./img/tiago.jpeg" alt="..." />
+                                <img class="img-fluid rounded-circle mb-4 px-4" src="./img/tiago 2 .jpg" alt="..." />
                                 <h5 class="fw-bolder">Tiago Antônio Freitas Targino</h5>                            
                             </div>
                         </div>
                         <div class="col mb-5 mb-xl-0">
                             <div class="text-center">
-                                <img class="img-fluid rounded-circle mb-4 px-4" src="./img/isaac.jpg" alt="..." />
+                                <img class="img-fluid rounded-circle mb-4 px-4" src="./img/isaac 2.jpg" alt="..." />
                                 <h5 class="fw-bolder">Isaac Freitas Medeira Costa</h5>
                             </div>
                         </div>
