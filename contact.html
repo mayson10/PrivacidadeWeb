@@ -14,28 +14,33 @@
         <link href="css/styles.css" rel="stylesheet" />
         <style>
             .navbar {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-box-shadow: none;
-z-index: 10; /* Garante que a navbar fique acima de outros elementos */
-width: 100%; 
-  }
-  .navbar-nav .nav-link {
-    color: #ffffff; /* Cor do texto (branco) */
-    font-weight: 630; /* Deixar o texto em negrito (opcional) */
-    font-size: 20px;
-    margin-left: 30px;
-}
-  .navbar-nav .nav-link::after {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                box-shadow: none;
+                z-index: 10; /* Garante que a navbar fique acima de outros elementos */
+                width: 100%; 
+            }
+            .navbar-nav .nav-link {
+                color: #ffffff; /* Cor do texto (branco) */
+                font-weight: 630; /* Deixar o texto em negrito (opcional) */
+                font-size: 20px;
+                margin-left: 30px;
+                position: relative;
+                padding-bottom: 5px;
+                transition: color 0.3s ease;
+            }
+            
+            /* Efeito de barra inferior */
+            .navbar-nav .nav-link::after {
                 content: '';
                 position: absolute;
                 left: 0;
                 bottom: 0;
                 width: 0;
                 height: 2px;
-                background-color: white	;
+                background-color: white;
                 transition: width 0.3s ease;
             }
 
@@ -46,32 +51,16 @@ width: 100%;
 
             .navbar-nav .nav-item:focus-within .nav-link {
                 outline: none;
-                border-bottom: 2px solid white	;
+                border-bottom: 2px solid white;
                 padding-bottom: 4px;
-            }
-            .navbar-nav .nav-link:hover::after,
-            .navbar-nav .nav-link:focus::after {
-                width: 100%;
-            }
-
-            .navbar-nav .nav-item:focus-within .nav-link {
-                outline: none;
-                border-bottom: 2px solid white	;
-                padding-bottom: 4px;
-            }
-            .navbar-nav .nav-link {
-                color: #ffffff;
-                position: relative;
-                padding-bottom: 5px;
-                transition: color 0.3s ease;
             }
 
             .navbar-nav .nav-link:hover, 
             .navbar-nav .nav-link:focus {
-                color: white			;
+                color: white;
                 text-decoration: none;
             }
-  </style>
+        </style>
     </head>
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
